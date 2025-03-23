@@ -15,8 +15,6 @@ const app = express();
 // Static middleware pointing to the public folder
 app.use(express.static('public'));
 
-// Connect to MongoDB and start the server
-const PORT = process.env.PORT || 5000;
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
